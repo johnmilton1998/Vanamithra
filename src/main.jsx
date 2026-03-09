@@ -5,12 +5,14 @@ import App from "./App.jsx";
 import "./styles.css";
 import { CartProvider } from "./context/CartContext";
 import { AuthProvider } from "./context/AuthContext";
+import { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <CartProvider>
         <App />
+        <Toaster position="top-center" />
       </CartProvider>
     </AuthProvider>
   </React.StrictMode>

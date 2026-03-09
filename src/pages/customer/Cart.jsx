@@ -6,7 +6,7 @@ export default function Cart() {
   const navigate = useNavigate();
 
   return (
-    <div className="container" style={{ padding: "40px" }}>
+    <div className="container">
       <h2 style={{ textAlign: "center", marginBottom: "40px", color: "#2e7d32" }}>Your Cart</h2>
 
       {cart.length === 0 ? (
@@ -17,38 +17,41 @@ export default function Cart() {
             {cart.map(item => (
               <div className="card" key={item.id} style={{
                 background: "#fff",
-                padding: "20px",
+                padding: "15px",
                 borderRadius: "12px",
                 boxShadow: "0 4px 20px rgba(0,0,0,.1)",
-                display: "flex",
-                justifyContent: "space-between",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "15px",
                 alignItems: "center"
               }}>
                 <div>
-                  <h3>{item.name}</h3>
-                  <p>₹{item.price} each</p>
+                  <h3 style={{ marginTop: 0, fontSize: "clamp(16px, 4vw, 20px)" }}>{item.name}</h3>
+                  <p style={{ marginBottom: 0 }}>₹{item.price} each</p>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
                   <input
                     type="number"
                     min="1"
                     value={item.qty}
                     onChange={(e) => updateQty(item.id, Number(e.target.value))}
-                    style={{ width: "60px", padding: "5px", borderRadius: "4px", border: "1px solid #ddd" }}
+                    style={{ width: "50px", padding: "8px", borderRadius: "4px", border: "1px solid #ddd", fontSize: "14px" }}
                   />
                   <button onClick={() => removeFromCart(item.id)} style={{
-                    padding: "5px 10px",
+                    padding: "8px 12px",
                     border: "none",
                     background: "#f44336",
                     color: "#fff",
                     borderRadius: "4px",
-                    cursor: "pointer"
+                    cursor: "pointer",
+                    fontSize: "12px",
+                    whiteSpace: "nowrap"
                   }}>
                     Remove
                   </button>
                 </div>
-                <div>
-                  <strong>Total: ₹{item.price * item.qty}</strong>
+                <div style={{ gridColumn: "1 / -1", textAlign: "right" }}>
+                  <strong style={{ fontSize: "clamp(14px, 3vw, 16px)" }}>Total: ₹{item.price * item.qty}</strong>
                 </div>
               </div>
             ))}
@@ -61,19 +64,21 @@ export default function Cart() {
             boxShadow: "0 4px 20px rgba(0,0,0,.1)",
             textAlign: "center"
           }}>
-            <h3>Grand Total: ₹{total}</h3>
+            <h3 style={{ fontSize: "clamp(18px, 4vw, 24px)" }}>Grand Total: ₹{total}</h3>
             <button
               className="btn"
               onClick={() => navigate("/checkout")}
               style={{
-                padding: "15px 30px",
+                padding: "12px 24px",
                 borderRadius: "8px",
                 border: "none",
                 background: "#2e7d32",
                 color: "#fff",
-                fontSize: "18px",
+                fontSize: "clamp(14px, 3vw, 16px)",
                 cursor: "pointer",
-                marginTop: "20px"
+                marginTop: "20px",
+                width: "100%",
+                maxWidth: "300px"
               }}
             >
               Proceed to Checkout

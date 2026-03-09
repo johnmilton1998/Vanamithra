@@ -1,0 +1,157 @@
+/* Admin Styles */
+/* general admin styles placed here if needed */
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+  }
+
+  table th,
+  table td {
+    padding: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 10px;
+  }
+
+  table th,
+  table td {
+    padding: 6px !important;
+  }
+}
+
+/* Admin Container */
+.admin-container {
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Admin Form */
+.admin-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+/* Admin Buttons */
+.admin-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.admin-btn-primary {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.admin-btn-primary:hover {
+  background: #1b5e20;
+}
+
+.admin-btn-secondary {
+  background: #ff9800;
+  color: #fff;
+}
+
+.admin-btn-secondary:hover {
+  background: #e68900;
+}
+
+.admin-btn-danger {
+  background: #f44336;
+  color: #fff;
+}
+
+.admin-btn-danger:hover {
+  background: #da190b;
+}
+
+/* Stats Cards */
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card h3 {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 15px;
+  }
+
+  .admin-form {
+    padding: 15px;
+  }
+
+  .admin-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-container {
+    padding: 10px;
+  }
+
+  .admin-form {
+    padding: 12px;
+  }
+
+  .admin-form input,
+  .admin-form textarea,
+  .admin-form select {
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+
+  .stat-card p {
+    font-size: 20px;
+  }
+}

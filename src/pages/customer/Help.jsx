@@ -21,9 +21,9 @@ export default function Help() {
         <div style={{ background: "#f9f9f9", padding: "20px", borderRadius: "8px" }}>
           <h3>Contact Support</h3>
           <p>If you need further assistance, please contact us:</p>
-          <p><strong>Email:</strong> support@vanamitra.com</p>
-          <p><strong>Phone:</strong> +91 98765 43210</p>
-          <p><strong>WhatsApp:</strong> +91 98765 43210</p>
+          <p><strong>Email:</strong> karthikpriyanm4@gmail.com</p>
+          <p><strong>Phone:</strong> +91 8870859460</p>
+          <p><strong>WhatsApp:</strong> +91 8870859460</p>
         </div>
       </div>
     </div>
